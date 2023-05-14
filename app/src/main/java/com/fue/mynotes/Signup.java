@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-public class Signup{}
-/*public class Signup  extends AppCompatActivity {
+
+public class Signup  extends AppCompatActivity {
     Button login,signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,4 +32,3 @@ public class Signup{}
         });
     }
 }
-*/
