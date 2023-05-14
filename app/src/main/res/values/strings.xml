@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MyNotes</string>
+    <string name="appName">My Notes</string>
+    <string name="logo">"my notes logo "</string>
+    <string name="EmailAddressLabel">Email:</string>
+    <string name="emailHint">example@gmail.com</string>
+    <string name="passwordLable">password:</string>
+    <string name="passwordHint">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
 </resources>
