@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".note">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:title="Note" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/back_button"
             app:layout_constraintVertical_bias="0.86"
-            app:tint="@color/purple_500" />
+            app:tint="@color/white" />
         <!-- Note Title -->
         <EditText
             android:id="@+id/note_title"
@@ -60,7 +47,6 @@
             android:background="@null"
             android:hint="note_title"
             android:inputType="text"
-            android:textColor="@color/white"
             android:textColorHint="#D3D3D3"
             android:textSize="16dp"
             android:layout_marginTop="8dp"
@@ -90,7 +76,6 @@
             android:hint="note content"
             android:inputType="textMultiLine"
             android:minHeight="100dp"
-            android:textColor="@color/white"
             android:textColorHint="#D3D3D3"
             android:textSize="13dp"
             app:layout_constraintEnd_toEndOf="@+id/note_title"

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         listView=findViewById(R.id.ListView);
         ArrayAdapter=new ArrayAdapter<String>(this,R.layout.layout_note,R.id.note_layout,ToDoList);
         listView.setAdapter(ArrayAdapter);
-        ToDoList.add("zadv");
+        //ToDoList.add("zadv");
         ArrayAdapter.notifyDataSetChanged();
     }
 }

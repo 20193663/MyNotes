@@ -20,7 +20,7 @@ public class Login  extends AppCompatActivity {
         password = findViewById(R.id.password_et);
         login.setOnClickListener(v -> {
             // Your onClick implementation here.
-            Intent myIntent = new Intent(Login.this, MainActivity.class);
+            Intent myIntent = new Intent(Login.this, note.class);
             //myIntent.putExtra("key", value); //Optional parameters
             startActivity(myIntent);
         });
