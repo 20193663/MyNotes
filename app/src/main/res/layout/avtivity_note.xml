@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".note">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Note" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/purple_500"
+            android:contentDescription="back button "/>
+        <!-- Done Button -->
+        <ImageView
+            android:id="@+id/done_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/fab_rounded"
+            android:contentDescription="done button"
+            android:padding="5dp"
+            android:src="@drawable/ic_done"
+            app:layout_constraintBottom_toBottomOf="@+id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_button"
+            app:layout_constraintVertical_bias="0.86"
+            app:tint="@color/purple_500" />
+        <!-- Note Title -->
+        <EditText
+            android:id="@+id/note_title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@null"
+            android:hint="note_title"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="#D3D3D3"
+            android:textSize="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button"
+            android:autofillHints="no" />
+        <!-- Time & Date -->
+        <TextView
+            android:id="@+id/time_and_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintStart_toStartOf="@+id/note_title"
+            app:layout_constraintTop_toBottomOf="@id/note_title"
+            android:textColor="#D3D3D3"
+            />
+        <!-- Note Content -->
+        <EditText
+            android:id="@+id/note_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="note content"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp"
+            android:textColor="@color/white"
+            android:textColorHint="#D3D3D3"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="@+id/note_title"
+            app:layout_constraintStart_toStartOf="@+id/note_title"
+            app:layout_constraintTop_toBottomOf="@+id/time_and_date"
+            android:autofillHints="no" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
