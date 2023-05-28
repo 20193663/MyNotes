@@ -59,9 +59,8 @@ public class Signup  extends AppCompatActivity {
                     changeInProgress(false);
                     if(task.isSuccessful()){
                         //creating acc is done
-                        Toast.makeText(Signup.this,"Successfully create account,Check email to verify",Toast.LENGTH_LONG).show();
-                        firebaseAuth.getCurrentUser().sendEmailVerification();
-                        firebaseAuth.signOut();
+                        Toast.makeText(Signup.this,"Successfully create account",Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(Signup.this,MainActivity.class));
                         finish();
                     }else{
                         //failure
