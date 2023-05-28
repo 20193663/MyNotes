@@ -4,31 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".note">
+    tools:context=".note_Activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:animateLayoutChanges="true">
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        app:layout_anchorGravity="center">
         <!-- Back Button -->
-        <ImageView
+        <ImageButton
             android:id="@+id/back_button"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/fab_rounded"
+            android:contentDescription="back button"
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/purple_500"
-            android:contentDescription="back button "/>
-        <!-- Done Button -->
-        <ImageView
-            android:id="@+id/done_button"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            app:tint="@color/white" />
+        <!-- delete Button -->
+        <ImageButton
+            android:id="@+id/delete_note_text_view_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="88dp"
+            android:background="@drawable/fab_rounded"
+            android:contentDescription="delete button"
+            android:padding="5dp"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/done_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/done_button"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/white"
+            tools:ignore="RedundantDescriptionCheck" />
+        <!-- Done Button -->
+        <ImageButton
+            android:id="@+id/done_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/fab_rounded"
             android:contentDescription="done button"
             android:padding="5dp"
@@ -36,52 +57,58 @@
             app:layout_constraintBottom_toBottomOf="@+id/back_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/back_button"
-            app:layout_constraintVertical_bias="0.86"
-            app:tint="@color/white" />
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/white"
+            tools:ignore="RedundantDescriptionCheck" />
         <!-- Note Title -->
         <EditText
             android:id="@+id/note_title"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginHorizontal="16dp"
-            android:background="@null"
+            android:layout_marginTop="16dp"
+            android:autofillHints="no"
+            android:background="@drawable/edit_text_bordar"
             android:hint="note_title"
             android:inputType="text"
-            android:textColorHint="#D3D3D3"
-            android:textSize="16dp"
-            android:layout_marginTop="8dp"
+            android:padding="5dp"
+            android:textColorHint="#696969"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/back_button"
-            android:autofillHints="no" />
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
         <!-- Time & Date -->
         <TextView
             android:id="@+id/time_and_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:text="5/28/2023"
+            android:textColor="@color/purple_700"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/note_title"
-            app:layout_constraintTop_toBottomOf="@id/note_title"
-            android:textColor="#D3D3D3"
-            />
+            app:layout_constraintTop_toBottomOf="@id/note_title" />
         <!-- Note Content -->
         <EditText
             android:id="@+id/note_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            android:background="@null"
+            android:autofillHints="no"
+            android:background="@drawable/edit_text_bordar"
             android:gravity="top"
             android:hint="note content"
             android:inputType="textMultiLine"
             android:minHeight="100dp"
-            android:textColorHint="#D3D3D3"
-            android:textSize="13dp"
+            android:padding="5dp"
+            android:textColorHint="#696969"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/note_title"
             app:layout_constraintStart_toStartOf="@+id/note_title"
-            app:layout_constraintTop_toBottomOf="@+id/time_and_date"
-            android:autofillHints="no" />
+            app:layout_constraintTop_toBottomOf="@+id/time_and_date" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,7 +7,7 @@
     tools:context=".Login">
 
     <ImageView
-        android:id="@+id/logo_iv"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -18,15 +18,15 @@
 
 
     <TextView
-        android:id="@+id/login_tv"
+        android:id="@+id/login"
         android:text="Login"
         android:textSize="30sp"
         android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/logo_iv"
-        app:layout_constraintStart_toStartOf="@+id/logo_iv"
-        app:layout_constraintTop_toBottomOf="@+id/logo_iv" />
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <LinearLayout
         android:id="@+id/inputs_ll"
@@ -36,7 +36,7 @@
         android:layout_marginTop="16dp"
         android:padding="16dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/login_tv"
+        app:layout_constraintTop_toBottomOf="@id/login"
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
@@ -61,7 +61,6 @@
             android:background="@drawable/rounded_et"
             android:hint="@string/passwordHint"
             android:layout_height="50dp"/>
-
     </LinearLayout>
 
 
@@ -75,7 +74,13 @@
         android:paddingHorizontal="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputs_ll">
-
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="64dp"
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"/>
         <Button
             android:id="@+id/login_btn"
             android:layout_width="match_parent"
