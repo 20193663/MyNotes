@@ -22,6 +22,6 @@ public class FirebaseUserReference {
 
     @SuppressLint("SimpleDateFormat")
     static String timestampToString(Timestamp timestamp){
-        return new SimpleDateFormat("MM/dd/yyyy").format(timestamp.toDate());
+        return new SimpleDateFormat("MM/dd/yyyy HH:MM:SS aaa").format(timestamp.toDate());
     }
 }

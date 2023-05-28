@@ -45,11 +45,15 @@
             android:hint="@string/emailHint"
             android:drawablePadding="8dp"
             android:paddingStart="8dp"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:drawableLeft="@drawable/ic_person"
             android:background="@drawable/rounded_et"
             android:layout_marginBottom="16dp"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:importantForAutofill="no"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            />
 
         <EditText
             android:id="@+id/password_et"
@@ -60,7 +64,11 @@
             android:drawableLeft="@drawable/ic_password"
             android:background="@drawable/rounded_et"
             android:hint="@string/passwordHint"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:importantForAutofill="no"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            />
     </LinearLayout>
 
 
